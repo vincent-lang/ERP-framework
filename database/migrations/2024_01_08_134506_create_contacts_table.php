@@ -13,19 +13,22 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('company');
-            $table->string('company_name');
-            $table->string('KVK_number')->unique();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('street');
-            $table->string('house_number');
-            $table->string('zipcode');
-            $table->string('location');
-            $table->string('email')->unique();
-            $table->string('phone_number')->unique();
-            $table->string('function');
+            $table->string('company')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('KVK_number')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('street')->nullable();
+            $table->string('house_number')->nullable();
+            $table->string('zipcode')->nullable();
+            $table->string('location')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->string('phone_number')->unique()->nullable();
+            $table->string('function')->nullable();
             $table->foreignId('company_id')->nullable();
+            $table->foreignId('conversation_id')->nullable();
+            $table->foreignId('appointment_id')->nullable();
+            $table->timestamps();
         });
     }
 
