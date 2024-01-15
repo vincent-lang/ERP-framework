@@ -22,12 +22,10 @@ return new class extends Migration
             $table->string('house_number')->nullable();
             $table->string('zipcode')->nullable();
             $table->string('location')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('phone_number')->unique()->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('function')->nullable();
             $table->foreignId('company_id')->nullable();
-            $table->foreignId('conversation_id')->nullable();
-            $table->foreignId('appointment_id')->nullable();
             $table->timestamps();
         });
     }

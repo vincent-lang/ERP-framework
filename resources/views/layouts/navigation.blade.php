@@ -24,6 +24,9 @@
                     <x-nav-link :href="route('contact.contactsList')" :active="request()->routeIs('contact.contactsList')">
                         {{ __('Bedrijven lijst') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('contact.conversationList')" :active="request()->routeIs('contact.conversationList')">
+                        {{ __('Gesprekken lijst') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -86,6 +89,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('contact.contactsList')" :active="request()->routeIs('contact.contactsList')">
                 {{ __('Bedrijven lijst') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('contact.conversationList')" :active="request()->routeIs('contact.conversationList')">
+                {{ __('Gesprekken lijst') }}
             </x-responsive-nav-link>
         </div>
 

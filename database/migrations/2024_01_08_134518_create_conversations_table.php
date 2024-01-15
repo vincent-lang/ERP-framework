@@ -17,6 +17,7 @@ return new class extends Migration
             $table->time('conversation_time');
             $table->string('talked_with');
             $table->string('notes_conversation');
+            $table->foreignId('klant_id')->nullable();
             $table->timestamps();
         });
     }

@@ -4,9 +4,13 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <div class="flex justify-center">
+    <div class="flex justify-evenly">
         <div class="p-6 mt-48 bg-white border border-black rounded-lg">
-            <h2 class="text-xl text-gray-800 leading-tight">Amount registered client's: <p class="font-semibold mt-4">{{$amount}}</p>
+            <h2 class="text-xl text-gray-800 leading-tight">Aantal geregistreerde klanten: <p class="font-semibold mt-4">{{$klanten}}</p>
+            </h2>
+        </div>
+        <div class="p-6 mt-48 bg-white border border-black rounded-lg">
+            <h2 class="text-xl text-gray-800 leading-tight">Aantal geregistreerde bedrijven: <p class="font-semibold mt-4">{{$bedrijven}}</p>
             </h2>
         </div>
     </div>

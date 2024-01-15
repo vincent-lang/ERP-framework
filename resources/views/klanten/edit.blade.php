@@ -4,7 +4,7 @@
             {{ __('Edit klant') }}
         </h2>
     </x-slot>
-    <form action="{{route('klanten.update')}}" method="post">
+    <form action="{{route('klanten.update', [$info->id])}}" method="post">
         @csrf
         @method('put')
         <div class="flex justify-center ml-5">
