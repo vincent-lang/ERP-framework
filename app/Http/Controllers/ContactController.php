@@ -52,9 +52,10 @@ class ContactController extends Controller
 
     public function klantGegevens(Contact $info)
     {
+        $company = Contact::all()->where('company', 'yes')->where('id', $info->company_id);
         $conversation_data = Conversation::all()->where('klant_id', $info->id);
 
-        return view('klantGegevens.gegevens', compact('info', 'conversation_data'));
+        return view('klantGegevens.gegevens', compact('company', 'conversation_data'));
     }
 
     public function index()
